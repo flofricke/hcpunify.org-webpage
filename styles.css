@@ -85,6 +85,28 @@ body{
 .card.feature ul{margin:12px 0 0 20px;color:var(--muted)}
 .card.feature li{margin-bottom:8px}
 
+/* Masonry gallery (CSS columns) */
+.masonry-grid{column-count:3;column-gap:14px}
+.masonry-grid figure{break-inside:avoid;margin:0 0 14px;border-radius:10px;overflow:hidden}
+.masonry-grid img{width:100%;height:auto;display:block}
+
+@media (max-width:900px){
+  .masonry-grid{column-count:2}
+}
+@media (max-width:520px){
+  .masonry-grid{column-count:1}
+}
+
+/* Lightbox modal */
+.lightbox{position:fixed;inset:0;background:rgba(2,6,10,0.85);display:flex;align-items:center;justify-content:center;visibility:hidden;opacity:0;transition:opacity .18s ease}
+.lightbox[aria-hidden="false"]{visibility:visible;opacity:1}
+.lb-stage{max-width:92vw;max-height:86vh;display:flex;align-items:center;justify-content:center}
+.lb-img{max-width:100%;max-height:100%;border-radius:8px}
+.lb-close,.lb-prev,.lb-next{position:fixed;background:transparent;border:0;color:#fff;font-size:28px;padding:10px;cursor:pointer}
+.lb-close{right:18px;top:18px}
+.lb-prev{left:18px;top:50%;transform:translateY(-50%)}
+.lb-next{right:18px;top:50%;transform:translateY(-50%)}
+
 .footer{border-top:1px solid rgba(255,255,255,0.02);padding:18px 0;margin-top:36px}
 .small{opacity:0.9;color:var(--muted)}
 

@@ -41,6 +41,19 @@
         </ul>
         <p><a class="btn" href="docs.html">Learn more in the documentation</a></p>
       </section>
+        <!-- masonry gallery: responsive column layout + lightbox -->
+        <section class="card masonry" id="gallery">
+          <h2>Gallery</h2>
+          <p class="lead">Screenshots and visuals — click to enlarge.</p>
+          <div class="masonry-grid">
+            <figure><img src="images/logo_picture.png" loading="lazy" alt="hcpunify image 1" data-index="0"></figure>
+            <figure><img src="images/logo_letter.png" loading="lazy" alt="hcpunify image 2" data-index="1"></figure>
+            <figure><img src="images/logo_picture.png" loading="lazy" alt="hcpunify image 3" data-index="2"></figure>
+            <figure><img src="images/logo_letter.png" loading="lazy" alt="hcpunify image 4" data-index="3"></figure>
+            <figure><img src="images/logo_picture.png" loading="lazy" alt="hcpunify image 5" data-index="4"></figure>
+            <figure><img src="images/logo_letter.png" loading="lazy" alt="hcpunify image 6" data-index="5"></figure>
+          </div>
+        </section>
 
       <article class="card">
         <h2>About this site</h2>
@@ -55,6 +68,14 @@
       </div>
     </footer>
 
-    <script src="script.js" defer></script>
+      <!-- Lightbox modal -->
+      <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lb-close" aria-label="Close">×</button>
+        <button class="lb-prev" aria-label="Previous">‹</button>
+        <div class="lb-stage"><img src="" alt="" class="lb-img"></div>
+        <button class="lb-next" aria-label="Next">›</button>
+      </div>
+
+      <script src="script.js" defer></script>
   </body>
 </html>
