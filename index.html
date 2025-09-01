@@ -1,12 +1,60 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meine Webseite</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>hcpunify</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Willkommen auf meiner Webseite!</h1>
-  <p>Das ist eine statische Seite über GitHub Pages.</p>
-</body>
+    <header class="topbar" role="banner">
+      <div class="topbar-inner">
+        <div class="brand">
+          <a href="index.html" class="logo">
+            <img src="images/logo_letter.png" alt="hcpunify logo" class="logo-img" />
+          </a>
+        </div>
+        <nav class="nav" role="navigation" aria-label="Main">
+          <a href="docs.html">Documentation</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" id="content" role="main">
+      <section class="hero">
+        <div class="hero-inner">
+          <img src="images/logo_picture.png" alt="hcpunify logo" class="main-logo" />
+          <div class="hero-text">
+            <h1>Welcome to hcpunify</h1>
+            <p class="lead">A minimal modern site — clean, responsive and English-only for now.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card feature">
+        <h2>What we offer</h2>
+        <p>hcpunify focuses on a compact, modern presentation that works well on any device. Below are a few highlights:</p>
+        <ul>
+          <li>Minimal, accessible UI</li>
+          <li>Responsive layout for mobile and desktop</li>
+          <li>Easy to adapt and extend</li>
+        </ul>
+        <p><a class="btn" href="docs.html">Learn more in the documentation</a></p>
+      </section>
+
+      <article class="card">
+        <h2>About this site</h2>
+        <p>This site demonstrates a slim layout with a fixed title bar. Language switching has been removed and content is English-only.</p>
+        <p><a class="btn" href="docs.html">View documentation</a></p>
+      </article>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container small">
+  <small>&copy; <span id="year"></span> hcpunify</small>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
 </html>
