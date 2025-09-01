@@ -3,10 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meine Webseite</title>
+  <title>hcpunify - Garagenöffner für Hörmann Motoren</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Immediate language loading to prevent flash
+    (function() {
+      const savedLang = localStorage.getItem('preferredLanguage') || 'de';
+      document.documentElement.lang = savedLang;
+      
+      // Apply language as soon as elements are available
+      function applyLanguage() {
+        const elements = document.querySelectorAll('[data-lang-de], [data-lang-en]');
+        elements.forEach(el => {
+          const text = el.getAttribute('data-lang-' + savedLang);
+          if (text) {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+              el.placeholder = text;
+            } else {
+              el.textContent = text;
+            }
+          }
+        });
+      }
+      
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', applyLanguage);
+      } else {
+        applyLanguage();
+      }
+    })();
+  </script>
 </head>
 <body>
-  <h1>Willkommen auf meiner Webseite!</h1>
-  <p>Das ist eine statische Seite über GitHub Pages.</p>
+  <header>
+    <div class="container">
+      <img src="images/logo_letter.png" alt="hcpunify Logo" class="header-logo">
+      <nav>
+        <ul>
+          <li><a href="#home" data-lang-de="Startseite" data-lang-en="Home">Startseite</a></li>
+          <li><a href="#about" data-lang-de="Über uns" data-lang-en="About">Über uns</a></li>
+          <li><a href="#products" data-lang-de="Produkte" data-lang-en="Products">Produkte</a></li>
+          <li><a href="docs.html" data-lang-de="Technische Dokumentation" data-lang-en="Technical Documentation">Technische Dokumentation</a></li>
+        </ul>
+        <div class="language-switch">
+          <button id="lang-de" class="active">DE</button>
+          <button id="lang-en">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <img src="images/logo_picture.png" alt="hcpunify Logo" class="hero-logo">
+        <h2 data-lang-de="Willkommen bei hcpunify" data-lang-en="Welcome to hcpunify">Willkommen bei hcpunify</h2>
+        <p data-lang-de="Der universelle Garagenöffner für Hörmann Motoren aller Generationen." data-lang-en="The universal garage opener for Hörmann motors of all generations.">
+          Der universelle Garagenöffner für Hörmann Motoren aller Generationen.
+        </p>
+        <a href="#products" class="btn" data-lang-de="Mehr erfahren" data-lang-en="Learn More">Mehr erfahren</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 data-lang-de="Über uns" data-lang-en="About Us">Über uns</h2>
+        <p data-lang-de="hcpunify bietet innovative Lösungen für Garagenöffner, spezialisiert auf Hörmann Motoren. Unser einzigartiges Feature ist die Kompatibilität mit Motoren sämtlicher Generationen, von den ältesten Modellen bis hin zu den neuesten." data-lang-en="hcpunify offers innovative solutions for garage openers, specialized in Hörmann motors. Our unique feature is compatibility with motors of all generations, from the oldest models to the latest.">
+          hcpunify bietet innovative Lösungen für Garagenöffner, spezialisiert auf Hörmann Motoren. Unser einzigartiges Feature ist die Kompatibilität mit Motoren sämtlicher Generationen, von den ältesten Modellen bis hin zu den neuesten.
+        </p>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="container">
+        <h2 data-lang-de="Produkte" data-lang-en="Products">Produkte</h2>
+        <div class="product">
+          <h3 data-lang-de="Universeller Garagenöffner" data-lang-en="Universal Garage Opener">Universeller Garagenöffner</h3>
+          <p data-lang-de="Kompatibel mit allen Hörmann Motoren-Generationen. Einfache Installation und zuverlässige Leistung." data-lang-en="Compatible with all Hörmann motor generations. Easy installation and reliable performance.">
+            Kompatibel mit allen Hörmann Motoren-Generationen. Einfache Installation und zuverlässige Leistung.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p data-lang-de="© 2025 hcpunify. Alle Rechte vorbehalten." data-lang-en="© 2025 hcpunify. All rights reserved.">
+        © 2025 hcpunify. Alle Rechte vorbehalten.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
